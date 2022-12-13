@@ -13,16 +13,29 @@
 		35DDFA7229480863001A5AB5 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 35DDFA7129480863001A5AB5 /* Preview Assets.xcassets */; };
 		35DDFA7429480863001A5AB5 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DDFA7329480863001A5AB5 /* Persistence.swift */; };
 		35DDFA7729480863001A5AB5 /* OpenKnowledge.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 35DDFA7529480863001A5AB5 /* OpenKnowledge.xcdatamodeld */; };
+		35DDFA7E294808F5001A5AB5 /* persist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DDFA7D294808F4001A5AB5 /* persist.swift */; };
+		35DDFA812948092C001A5AB5 /* Compose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DDFA802948092C001A5AB5 /* Compose.swift */; };
+		35DDFA8329480934001A5AB5 /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DDFA8229480934001A5AB5 /* History.swift */; };
+		35DDFA852948093D001A5AB5 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DDFA842948093D001A5AB5 /* Settings.swift */; };
+		35DDFA8729480946001A5AB5 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DDFA8629480946001A5AB5 /* Info.swift */; };
+		35DDFA8929480BB6001A5AB5 /* Bundle+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DDFA8829480BB6001A5AB5 /* Bundle+Info.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		35DDFA6729480861001A5AB5 /* OpenKnowledge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenKnowledge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		35DDFA6729480861001A5AB5 /* Open Knowledge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Open Knowledge.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		35DDFA6A29480861001A5AB5 /* OpenKnowledgeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenKnowledgeApp.swift; sourceTree = "<group>"; };
 		35DDFA6C29480861001A5AB5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		35DDFA6E29480863001A5AB5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		35DDFA7129480863001A5AB5 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		35DDFA7329480863001A5AB5 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		35DDFA7629480863001A5AB5 /* OpenKnowledge.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OpenKnowledge.xcdatamodel; sourceTree = "<group>"; };
+		35DDFA7D294808F4001A5AB5 /* persist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persist.swift; sourceTree = "<group>"; };
+		35DDFA802948092C001A5AB5 /* Compose.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compose.swift; sourceTree = "<group>"; };
+		35DDFA8229480934001A5AB5 /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		35DDFA842948093D001A5AB5 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		35DDFA8629480946001A5AB5 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		35DDFA8829480BB6001A5AB5 /* Bundle+Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Info.swift"; sourceTree = "<group>"; };
+		35DDFA8A29480D75001A5AB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +60,7 @@
 		35DDFA6829480861001A5AB5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				35DDFA6729480861001A5AB5 /* OpenKnowledge.app */,
+				35DDFA6729480861001A5AB5 /* Open Knowledge.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -55,12 +68,16 @@
 		35DDFA6929480861001A5AB5 /* OpenKnowledge */ = {
 			isa = PBXGroup;
 			children = (
+				35DDFA8A29480D75001A5AB5 /* Info.plist */,
 				35DDFA6A29480861001A5AB5 /* OpenKnowledgeApp.swift */,
 				35DDFA6C29480861001A5AB5 /* ContentView.swift */,
+				35DDFA7F2948091C001A5AB5 /* Views */,
 				35DDFA6E29480863001A5AB5 /* Assets.xcassets */,
 				35DDFA7329480863001A5AB5 /* Persistence.swift */,
 				35DDFA7529480863001A5AB5 /* OpenKnowledge.xcdatamodeld */,
 				35DDFA7029480863001A5AB5 /* Preview Content */,
+				35DDFA7D294808F4001A5AB5 /* persist.swift */,
+				35DDFA8829480BB6001A5AB5 /* Bundle+Info.swift */,
 			);
 			path = OpenKnowledge;
 			sourceTree = "<group>";
@@ -73,12 +90,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		35DDFA7F2948091C001A5AB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				35DDFA802948092C001A5AB5 /* Compose.swift */,
+				35DDFA8229480934001A5AB5 /* History.swift */,
+				35DDFA842948093D001A5AB5 /* Settings.swift */,
+				35DDFA8629480946001A5AB5 /* Info.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		35DDFA6629480861001A5AB5 /* OpenKnowledge */ = {
+		35DDFA6629480861001A5AB5 /* Open Knowledge */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 35DDFA7A29480863001A5AB5 /* Build configuration list for PBXNativeTarget "OpenKnowledge" */;
+			buildConfigurationList = 35DDFA7A29480863001A5AB5 /* Build configuration list for PBXNativeTarget "Open Knowledge" */;
 			buildPhases = (
 				35DDFA6329480861001A5AB5 /* Sources */,
 				35DDFA6429480861001A5AB5 /* Frameworks */,
@@ -88,9 +116,9 @@
 			);
 			dependencies = (
 			);
-			name = OpenKnowledge;
+			name = "Open Knowledge";
 			productName = OpenKnowledge;
-			productReference = 35DDFA6729480861001A5AB5 /* OpenKnowledge.app */;
+			productReference = 35DDFA6729480861001A5AB5 /* Open Knowledge.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -121,7 +149,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				35DDFA6629480861001A5AB5 /* OpenKnowledge */,
+				35DDFA6629480861001A5AB5 /* Open Knowledge */,
 			);
 		};
 /* End PBXProject section */
@@ -144,8 +172,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				35DDFA7729480863001A5AB5 /* OpenKnowledge.xcdatamodeld in Sources */,
+				35DDFA8929480BB6001A5AB5 /* Bundle+Info.swift in Sources */,
+				35DDFA7E294808F5001A5AB5 /* persist.swift in Sources */,
+				35DDFA852948093D001A5AB5 /* Settings.swift in Sources */,
+				35DDFA8729480946001A5AB5 /* Info.swift in Sources */,
+				35DDFA8329480934001A5AB5 /* History.swift in Sources */,
 				35DDFA7429480863001A5AB5 /* Persistence.swift in Sources */,
 				35DDFA6D29480861001A5AB5 /* ContentView.swift in Sources */,
+				35DDFA812948092C001A5AB5 /* Compose.swift in Sources */,
 				35DDFA6B29480861001A5AB5 /* OpenKnowledgeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -203,10 +237,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 - Farouq Apps Inc.";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "Open Knowledge";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -257,9 +293,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2022 - Farouq Apps Inc.";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "Open Knowledge";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -277,9 +315,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"OpenKnowledge/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OpenKnowledge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -305,9 +343,9 @@
 				DEVELOPMENT_ASSET_PATHS = "\"OpenKnowledge/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = OpenKnowledge/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -335,7 +373,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		35DDFA7A29480863001A5AB5 /* Build configuration list for PBXNativeTarget "OpenKnowledge" */ = {
+		35DDFA7A29480863001A5AB5 /* Build configuration list for PBXNativeTarget "Open Knowledge" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				35DDFA7B29480863001A5AB5 /* Debug */,
