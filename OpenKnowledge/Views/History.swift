@@ -11,11 +11,11 @@ struct History: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
-        sortDescriptors: [NSSortDescriptor(keyPath: \Item.date, ascending: true)],
+        sortDescriptors: [NSSortDescriptor(keyPath: \Item.date, ascending: false)],
         animation: .default)
     private var items: FetchedResults<Item>
     
-    @State var showAlert : Bool = false
+    @State var showSheet : Bool = false
 
 
     var body: some View {
@@ -23,12 +23,39 @@ struct History: View {
             List {
                 ForEach(items) { item in
                     NavigationLink {
-                        VStack{
-                            Text("Item at \(item.date!, formatter: itemFormatter)")
-                            Text(item.text!)
+                        ScrollView{
+                            VStack{
+                                Text("Date: \(item.date!, formatter: itemFormatter)")
+                                Text("Response:")
+                                Text(String(item.text!.filter{!"\n".contains($0)}))
+                                    .multilineTextAlignment(.center)
+                                    .padding()
+                                Group{
+                                    Text("Tokens Used Breakdown:")
+                                    Text(item.completion!)
+                                    Text(item.prompt_t!)
+                                    Text(item.total!)
+                                    Text("\nCreated ID:")
+                                    Text(item.created!)
+                                    Text("Response ID: \(item.id!)")
+                                        .multilineTextAlignment(.center)
+                                }
+
+                                Button (action:{
+                                    item.liked.toggle()
+                                }, label: {
+                                    Image(item.liked == true ? "liked" : "like")
+                                }).scaleEffect(0.7)
+                            }
                         }
                     } label: {
-                        Text(item.text!)
+                        HStack{
+                            Image(item.liked == true ? "liked" : "like").scaleEffect(0.4)
+                            VStack{
+                                Text(item.promptText ?? "Error")
+                                Text(item.date!, formatter: itemFormatter)
+                            }
+                        }
                     }
                 }
                 .onDelete(perform: deleteItems)
@@ -39,28 +66,13 @@ struct History: View {
                 }
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button(action: {
-                        showAlert = true
+                        showSheet = true
                     }, label: {
-                        Label("Delete All", systemImage: "trash")
+                        Label("Delete All", systemImage: "clock")
                     })
-                    .alert(isPresented: $showAlert) {
-                            Alert(
-                                title: Text("Are you sure you want to delete all your entries?"),
-                                message: Text("Clicking 'Yes' will permanently delete all entries"),
-                                primaryButton: .default(
-                                          Text("Cancel")
-                                      ),
-                                
-                                  secondaryButton: .destructive(
-                                      Text("Delete all entries"),
-                                      action: {
-                                          
-                                          
-                                      }
-                                  )
-                            )
-                    }
                 }
+            }.sheet(isPresented: $showSheet) {
+                SetNotification()
             }
             Text("Select an item")
         }

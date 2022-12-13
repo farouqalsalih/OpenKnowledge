@@ -13,13 +13,14 @@ struct Settings: View {
     
     @State public var model:String = "text-davinci-003"
     @State var temperature:Double = 1
-    @State var max_tokens:Double = 2048
+    @State var max_tokens:Double = 1700
     @State var api_key:String = "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"
     @State var buttonText:String = "Copy to Clipboard"
     private let pasteboard = UIPasteboard.general
     @EnvironmentObject var persistData:persist
     let items = ["text-davinci-003", "text-davinci-002", "text-curie-001", "text-babbage-001", "text-ada-001"]
     @State var tokens:Double = 1700
+    @State var showActionSheet:Bool = false
     
     var body: some View {
         Form{
@@ -81,15 +82,36 @@ struct Settings: View {
             
             Section("Save"){
                 Button(action: {
-                    self.persistData.MAX_TOKENS = max_tokens
-                    self.persistData.TEMPERATURE = temperature
-                    self.persistData.API_KEY = api_key
-                    self.persistData.MODEL = model
-
+                    showActionSheet = true
                 }, label: {
-                    Text("Save")
-                })
+                    HStack{
+                        Spacer()
+                        Text("Save")
+                        Spacer()
+                    }
+                }).actionSheet(isPresented: $showActionSheet) {
+                    ActionSheet(title: Text("Are you sure you want to save your changes? This will erase your previous settings"),
+                                message: Text("Clicking 'Yes' will permanently delete all entries"),
+                                buttons: [
+                                    .cancel(),
+                                    .destructive(
+                                        Text("Save"),
+                                        action: {
+                                            self.persistData.MAX_TOKENS = max_tokens
+                                            self.persistData.TEMPERATURE = temperature
+                                            self.persistData.API_KEY = api_key
+                                            self.persistData.MODEL = model
+                                        }
+                                    ),
+                                    .default(
+                                        Text("Don't save")
+                                    )
+                                ]
+                    )
+                }
             }
+            
+            
         }
     }
         

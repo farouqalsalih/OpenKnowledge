@@ -5,12 +5,14 @@
         <attribute name="created" optional="YES" attributeType="String"/>
         <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="String"/>
+        <attribute name="liked" optional="YES" attributeType="Boolean" usesScalarValueType="YES"/>
         <attribute name="prompt_t" optional="YES" attributeType="String"/>
+        <attribute name="promptText" optional="YES" attributeType="String"/>
         <attribute name="text" optional="YES" attributeType="String"/>
         <attribute name="total" optional="YES" attributeType="String"/>
         <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
     </entity>
     <elements>
-        <element name="Item" positionX="-63" positionY="-18" width="128" height="149"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="179"/>
     </elements>
 </model>

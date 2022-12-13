@@ -19,6 +19,8 @@
 		35DDFA852948093D001A5AB5 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DDFA842948093D001A5AB5 /* Settings.swift */; };
 		35DDFA8729480946001A5AB5 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DDFA8629480946001A5AB5 /* Info.swift */; };
 		35DDFA8929480BB6001A5AB5 /* Bundle+Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DDFA8829480BB6001A5AB5 /* Bundle+Info.swift */; };
+		35DDFA8C29482BA6001A5AB5 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DDFA8B29482BA6001A5AB5 /* Notifications.swift */; };
+		35DDFA8E29482EF0001A5AB5 /* SetNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DDFA8D29482EF0001A5AB5 /* SetNotification.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		35DDFA8629480946001A5AB5 /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		35DDFA8829480BB6001A5AB5 /* Bundle+Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Info.swift"; sourceTree = "<group>"; };
 		35DDFA8A29480D75001A5AB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		35DDFA8B29482BA6001A5AB5 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		35DDFA8D29482EF0001A5AB5 /* SetNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNotification.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 				35DDFA7029480863001A5AB5 /* Preview Content */,
 				35DDFA7D294808F4001A5AB5 /* persist.swift */,
 				35DDFA8829480BB6001A5AB5 /* Bundle+Info.swift */,
+				35DDFA8B29482BA6001A5AB5 /* Notifications.swift */,
 			);
 			path = OpenKnowledge;
 			sourceTree = "<group>";
@@ -97,6 +102,7 @@
 				35DDFA8229480934001A5AB5 /* History.swift */,
 				35DDFA842948093D001A5AB5 /* Settings.swift */,
 				35DDFA8629480946001A5AB5 /* Info.swift */,
+				35DDFA8D29482EF0001A5AB5 /* SetNotification.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -173,10 +179,12 @@
 			files = (
 				35DDFA7729480863001A5AB5 /* OpenKnowledge.xcdatamodeld in Sources */,
 				35DDFA8929480BB6001A5AB5 /* Bundle+Info.swift in Sources */,
+				35DDFA8C29482BA6001A5AB5 /* Notifications.swift in Sources */,
 				35DDFA7E294808F5001A5AB5 /* persist.swift in Sources */,
 				35DDFA852948093D001A5AB5 /* Settings.swift in Sources */,
 				35DDFA8729480946001A5AB5 /* Info.swift in Sources */,
 				35DDFA8329480934001A5AB5 /* History.swift in Sources */,
+				35DDFA8E29482EF0001A5AB5 /* SetNotification.swift in Sources */,
 				35DDFA7429480863001A5AB5 /* Persistence.swift in Sources */,
 				35DDFA6D29480861001A5AB5 /* ContentView.swift in Sources */,
 				35DDFA812948092C001A5AB5 /* Compose.swift in Sources */,
