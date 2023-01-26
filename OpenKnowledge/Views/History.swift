@@ -104,5 +104,7 @@ private let itemFormatter: DateFormatter = {
 struct History_Previews: PreviewProvider {
     static var previews: some View {
         History()
+            .preferredColorScheme(.dark)
+
     }
 }

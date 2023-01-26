@@ -22,45 +22,41 @@ struct Compose: View {
             Rectangle()
                 .foregroundColor(.gray)
             
-            ScrollView{
                 
-    //                .cornerRadius(9)
-                VStack{
-                    Spacer()
-                    
-                    if(done){
+            VStack{
+                Spacer()
+                
+                if(done){
+                    ScrollView{
                         Text(APIResult)
                             .font(.custom("Helvetica", size: 30))
                             .multilineTextAlignment(.center)
-                    } else {
-                        ProgressView("Please Wait")
                     }
-        //            Spacer()
-        //            Text("H")
-        //            Spacer()
-                    TextEditor(text: $prompt)
-                        .frame(height: 100)
-                        .background(.white)
-                        .foregroundColor(.black)
-    //                    .padding()
                     
-                    Spacer()
-                    
-                    Button(action: {
-                        Task{
-                            done.toggle()
-                            await load()
-                            done.toggle()
-                            hideKeyboard()
-
-                        }
-                    }, label: {
-                        Text("Generate")
-                            .font(.custom("Helvetica", size: 30))
-                            .padding()
-                    })
-                    
+                } else {
+                    ProgressView("Please Wait")
                 }
+                TextEditor(text: $prompt)
+                    .frame(height: 100)
+                    .background(.white)
+                    .foregroundColor(.black)
+                
+                Spacer()
+                
+                Button(action: {
+                    Task{
+                        done.toggle()
+                        await load()
+                        done.toggle()
+                        hideKeyboard()
+
+                    }
+                }, label: {
+                    Text("Generate")
+                        .font(.custom("Helvetica", size: 30))
+                        .padding()
+                })
+                
             }.onTapGesture {
                 hideKeyboard()
             }
@@ -122,7 +118,7 @@ struct Compose: View {
             if(text == nil || created == nil || id == nil || completion_tokens == nil || prompt_tokens == nil || total_tokens == nil){
                 APIResult = "There was an error in processing your request, please try again at a later time"
             } else {
-                APIResult = "Response: \(text ?? "None")\nPrompt Tokens: \(prompt_tokens ?? 0)\n"
+                APIResult = "Response: \(text ?? "None")\nTotal Tokens: \(total_tokens ?? 0)\n"
                 
                 withAnimation {
                     let listing = Item(context: viewContext)
@@ -170,5 +166,6 @@ struct Compose_Previews: PreviewProvider {
 
         Compose()
             .environmentObject(a)
+            .preferredColorScheme(.dark)
     }
 }

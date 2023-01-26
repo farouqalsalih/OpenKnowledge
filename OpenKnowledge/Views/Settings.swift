@@ -25,7 +25,7 @@ struct Settings: View {
     var body: some View {
         Form{
             Text("API Key Provided: \n\(original_API_KEY)")
-            
+            //Received help from: https://github.com/indently/CopyTextToClipboard/blob/main/CopyTextToClipboard/ContentView.swift
             HStack {
                 Button {
                     copyToClipboard()
@@ -115,6 +115,7 @@ struct Settings: View {
         }
     }
         
+    //Received help from: https://github.com/indently/CopyTextToClipboard/blob/main/CopyTextToClipboard/ContentView.swift
     func copyToClipboard() {
         pasteboard.string = self.original_API_KEY
         
@@ -132,6 +133,8 @@ struct Settings_Previews: PreviewProvider {
 
         Settings()
             .environmentObject(a)
+            .preferredColorScheme(.dark)
+
 
     }
 }
