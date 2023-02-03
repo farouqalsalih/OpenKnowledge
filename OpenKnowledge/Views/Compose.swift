@@ -76,7 +76,6 @@ struct Compose: View {
         request.httpMethod = "POST"
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         request.addValue("Bearer \(persistData.API_KEY)", forHTTPHeaderField: "Authorization")
-//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
 
         var body: [String: Any] = [String:Any]()
         body["model"] = persistData.MODEL
