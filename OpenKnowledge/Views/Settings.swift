@@ -14,7 +14,7 @@ struct Settings: View {
     @State public var model:String = "text-davinci-003"
     @State var temperature:Double = 1
     @State var max_tokens:Double = 1700
-    @State var api_key:String = "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"
+    @State var api_key:String = "your_API_key"
     @State var buttonText:String = "Copy to Clipboard"
     private let pasteboard = UIPasteboard.general
     @EnvironmentObject var persistData:persist
