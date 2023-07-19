@@ -9,7 +9,7 @@ import SwiftUI
 import UIKit
 
 struct Settings: View {
-    let original_API_KEY = "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"
+    let original_API_KEY = "your_API_key"
     
     @State public var model:String = "text-davinci-003"
     @State var temperature:Double = 1
